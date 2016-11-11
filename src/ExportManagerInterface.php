@@ -12,12 +12,12 @@ interface ExportManagerInterface {
    *
    * @param string $filename
    *   The filename to write to.
-   * @param array $items
+   * @param \Traversable $items
    *   Items to export.
    *
    * @return string
    *   Log output.
    */
-  public function export($filename, array $items = []);
+  public function export($filename, \Traversable $items = []);
 
 }

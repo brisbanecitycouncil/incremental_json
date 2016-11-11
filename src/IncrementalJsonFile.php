@@ -13,6 +13,7 @@ class IncrementalJsonFile implements IncrementalFileInterface {
    * @var resource
    */
   protected $file;
+
   /**
    * If the first line has been written.
    *

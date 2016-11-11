@@ -37,7 +37,7 @@ class ExportManager implements ExportManagerInterface {
   /**
    * {@inheritdoc}
    */
-  public function export($filename, array $items = []) {
+  public function export($filename, \Traversable $items = []) {
     $total_rows = count($items);
     $delta = 0;
     $buffer = '';
