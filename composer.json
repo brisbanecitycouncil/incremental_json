@@ -16,5 +16,13 @@
             "email": "l@pnx.me"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {"Pnx\\I9lJson\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"Pnx\\I9lJson\\Tests\\": "tests/"}
+    },
+    "require": {
+        "symfony/serializer": "~2.8"
+    }
 }
