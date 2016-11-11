@@ -18,6 +18,6 @@ interface ExportManagerInterface {
    * @return string
    *   Log output.
    */
-  public function export($filename, \Traversable $items = []);
+  public function export($filename, \Traversable $items);
 
 }
