@@ -2,11 +2,6 @@
 
 namespace Pnx\I9lJson;
 
-use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Drupal\sarcib_exports\Normalizer\NodeNormalizer;
-use EntityFieldQuery;
-
 /**
  * Implementation of ExportManagerInterface
  */
