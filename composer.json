@@ -2,9 +2,6 @@
     "name": "previousnext/incremental_json",
     "description": "Write json files incrementally",
     "type": "library",
-    "require-dev": {
-        "phpunit/phpunit": "^5.6"
-    },
     "license": "GPLv2+",
     "authors": [
         {
@@ -16,13 +13,19 @@
             "email": "l@pnx.me"
         }
     ],
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {"Pnx\\I9lJson\\": "src/"}
     },
     "autoload-dev": {
         "psr-4": {"Pnx\\I9lJson\\Tests\\": "tests/"}
     },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    },
     "require": {
-        "symfony/serializer": "~3.2"
+        "php": "^7.1",
+        "ext-json": "*",
+        "mikey179/vfsstream": "v1.x-dev"
     }
 }
