@@ -21,11 +21,11 @@
         "psr-4": {"Pnx\\I9lJson\\Tests\\": "tests/"}
     },
     "require-dev": {
-        "phpunit/phpunit": "^7"
+        "phpunit/phpunit": "^7",
+        "mikey179/vfsstream": "v1.x-dev"
     },
     "require": {
         "php": "^7.1",
-        "ext-json": "*",
-        "mikey179/vfsstream": "v1.x-dev"
+        "ext-json": "*"
     }
 }
