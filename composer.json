@@ -23,6 +23,6 @@
         "psr-4": {"Pnx\\I9lJson\\Tests\\": "tests/"}
     },
     "require": {
-        "symfony/serializer": "~3.2"
+        "symfony/serializer": "~3.2 || ~4.4"
     }
 }
