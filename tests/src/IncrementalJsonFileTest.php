@@ -43,6 +43,9 @@ class IncrementalJsonFileTest extends TestCase {
 
   /**
    * Test serializing the file.
+   *
+   * @covers ::serialize
+   * @covers ::unserialize
    */
   public function testSerialize() {
     $file = new IncrementalJsonFile('window.foo = ');
@@ -50,7 +53,6 @@ class IncrementalJsonFileTest extends TestCase {
     $file->write(['bar']);
 
     $file = unserialize(serialize($file));
-
     $file->write('baz');
 
     $file->commit($this->testFile->url());
