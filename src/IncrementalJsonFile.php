@@ -123,16 +123,30 @@ class IncrementalJsonFile implements \Serializable {
    * {@inheritdoc}
    */
   public function serialize() {
-    return serialize([$this->getFileUri(), $this->firstWrite]);
+    return $this->__serialize();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __serialize(): array {
+    return [$this->getFileUri(), $this->firstWrite];
   }
 
   /**
    * {@inheritdoc}
    */
   public function unserialize($serialized) {
-    list($file_uri, $firstWrite) = unserialize($serialized);
+    $this->__unserialize($serialized);
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __unserialize(array $data): void {
+    [$file_uri, $firstWrite] = $data;
     $this->file = fopen($file_uri, 'a+');
     $this->firstWrite = $firstWrite;
   }
-
 }
